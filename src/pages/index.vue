@@ -11,6 +11,8 @@
 <script>
 import QrScanner from 'qr-scanner'
 
+QrScanner.WORKER_PATH = '/qr-scanner-worker.min.js'
+
 export default {
     data(){
         return {
