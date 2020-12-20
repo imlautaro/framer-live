@@ -4,6 +4,7 @@
         <div style="width: 500px" id="reader"></div>
         <video ref="scanner"></video>
         <button @click="scan()">Scan</button>
+        {{ result }}
     </div>
 </template>
 
@@ -13,11 +14,14 @@ import QrScanner from 'qr-scanner'
 export default {
     data(){
         return {
-            scanner: null
+            scanner: null,
+            result: null
         }
     },
     mounted(){
-        this.scanner = new QrScanner(this.$refs.scanner, result => alert(result))
+        this.scanner = new QrScanner(this.$refs.scanner, result => {
+            this.result = result
+        })
     },
     methods: {
         scan(){
