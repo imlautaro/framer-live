@@ -17,7 +17,7 @@ export default {
         }
     },
     mounted(){
-        this.scanner = new QrScanner(this.$refs.scanner, result => console.log(result))
+        this.scanner = new QrScanner(this.$refs.scanner, result => alert(result))
     },
     methods: {
         scan(){

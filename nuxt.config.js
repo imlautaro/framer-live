@@ -6,9 +6,6 @@ export default {
     server: {
         host: '0.0.0.0'
     },
-    router: {
-        base: '/framer-live/'
-    },
     generate: {
         dir: 'docs'
     }
