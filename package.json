@@ -1,0 +1,24 @@
+{
+  "name": "framer-live",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "keywords": [
+    "Framer",
+    "Framer Preview",
+    "Framer Live"
+  ],
+  "author": "Lautaro Pereyra <dev.lautaropereyra@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nuxt": "^2.14.12",
+    "qr-scanner": "^1.2.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/pwa": "^3.3.3"
+  }
+}
