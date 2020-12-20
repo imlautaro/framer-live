@@ -2,8 +2,9 @@
     <div>
         <h1>Hello world!</h1>
         <div style="width: 500px" id="reader"></div>
-        <video ref="scanner"></video>
+        <video ref="scanner" @click="stopScanner()"></video>
         <button @click="scan()">Scan</button>
+        <iframe v-bind:src="result"></iframe>
         {{ result }}
     </div>
 </template>
@@ -24,10 +25,14 @@ export default {
         this.scanner = new QrScanner(this.$refs.scanner, result => {
             this.result = result
         })
+        this.scanner.start()
     },
     methods: {
-        scan(){
+        startScanner(){
             this.scanner.start()
+        },
+        stopScanner(){
+            this.scanner.stop()
         }
     }
 }
