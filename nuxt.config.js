@@ -8,5 +8,8 @@ export default {
     },
     router: {
         base: '/framer-live/'
+    },
+    generate: {
+        dir: 'docs'
     }
 }
